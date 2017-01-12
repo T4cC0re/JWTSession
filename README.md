@@ -32,8 +32,9 @@ Call this to explicitly save the cookie. If you registered a shutdown function y
 
  - Tokens are signed with HMAC256
  - You control the secret.
+ - The token is only valid for the same `$_SERVER['SERVER_NAME']`
  - Use the whitelist feature to exclude any legacy `$_SESSION` values you don't need.
- - Do not expose sensitive data vie JWT. If you need to do this, this is not the correct choice for you!
+ - Do not expose sensitive data via JWT. If you need to do this, this is not the correct choice for you!
  - If you set a whitelist, only those values will be allowed.
  - If you DO NOT set a whitelist, ALL values will be exported.
 
